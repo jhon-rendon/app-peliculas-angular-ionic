@@ -1,0 +1,12 @@
+<ion-slides [options]="slideOpts">
+  <ion-slide *ngFor="let pelicula of peliculasRecientes; let i= index">
+    
+    <ion-card (click)="verDetallelMovie( pelicula.id )">
+      <ion-card-subtitle>{{ pelicula.title }}</ion-card-subtitle>
+      <ion-img [src]="pelicula.backdrop_path | imagen" ></ion-img>
+      
+    </ion-card>
+
+
+  </ion-slide>
+</ion-slides>
